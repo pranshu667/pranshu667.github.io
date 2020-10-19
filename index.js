@@ -147,6 +147,9 @@ function animate() {
     const dist = Math.hypot(player.x - enemy.x, player.y - enemy.y);
     if (dist - enemy.radius - player.radius < 1) {
       cancelAnimationFrame(animationID);
+      addEventListener("click", (e) => {
+        location.reload();
+      });
     }
 
     projectiles.forEach((projectile, projectileID) => {
